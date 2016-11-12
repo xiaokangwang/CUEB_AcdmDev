@@ -9,8 +9,9 @@ import org.kkdev.cueb.entities.User;
  * Entity implementation class for Entity: Session
  *
  */
-@Entity
+
 @Table(name="SESSION")
+@Entity
 public class Session implements Serializable {
 
 	@Id

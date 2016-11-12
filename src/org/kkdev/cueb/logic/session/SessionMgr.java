@@ -25,6 +25,6 @@ public class SessionMgr {
 	public static Session GetSessionByName(String name) {
 		//TODO
 		EntityManager em=PersisUtil.getEntityManager();
-		return em.find(Session.class, "name");
+		return em.find(Session.class, name);
 	}
 }

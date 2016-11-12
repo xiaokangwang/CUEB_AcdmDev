@@ -9,7 +9,6 @@ import javax.ws.rs.Produces;
 import org.kkdev.cueb.entities.Session;
 import org.kkdev.cueb.logic.RequiredPremission;
 import org.kkdev.cueb.logic.session.SessionMgr;
-import org.kkdev.cueb.logic.user.PremissionChecker;
 import org.kkdev.cueb.miscellaneous.LoggerMisc;
 
 /**
@@ -17,7 +16,7 @@ import org.kkdev.cueb.miscellaneous.LoggerMisc;
  */
 @Stateless
 @LocalBean
-@RequiredPremission("none")
+@RequiredPremission("None")
 @Path("/CreateSession")
 public class CreateSession implements CreateSessionRemote {
 

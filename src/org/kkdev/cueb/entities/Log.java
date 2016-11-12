@@ -18,7 +18,8 @@ public class Log implements Serializable {
 	private String Action; 
 	private Integer LogLevel; 
 	private String Detail;
-	private static final long serialVersionUID = 1L;	
+	private String Associated_Sessid;
+	private static final long serialVersionUID = 2L;	
 	public Log() {
 		super();
 	} 
@@ -69,6 +70,20 @@ public class Log implements Serializable {
 
 	public void setDetail(String Detail) {
 		this.Detail = Detail;
+	}
+
+	/**
+	 * @return the associated_Sessid
+	 */
+	public String getAssociated_Sessid() {
+		return Associated_Sessid;
+	}
+
+	/**
+	 * @param associated_Sessid the associated_Sessid to set
+	 */
+	public void setAssociated_Sessid(String associated_Sessid) {
+		Associated_Sessid = associated_Sessid;
 	}
 	
    

@@ -1,4 +1,4 @@
-package org.kkdev.cueb;
+package org.kkdev.cueb.db;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

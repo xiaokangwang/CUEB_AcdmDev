@@ -9,6 +9,7 @@ import javax.persistence.*;
  * Entity implementation class for Entity: User_Token
  *
  */
+@Table(name="USER_TOKEN")
 public class User_Token implements Serializable {
 
 	@Id

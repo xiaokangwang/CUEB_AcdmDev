@@ -10,6 +10,7 @@ import javax.persistence.*;
  * Entity implementation class for Entity: Role
  *
  */
+@Table(name="ROLE")
 public class Role implements Serializable {
 
 	 

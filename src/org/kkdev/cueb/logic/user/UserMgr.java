@@ -34,4 +34,9 @@ public class UserMgr {
 		}
 		return currentUser;
 	}
+	public static User GetUserByName(String Name) {
+		//TODO
+		EntityManager em=PersisUtil.getEntityManager();
+		return em.find(User.class, "name");
+	}
 }

@@ -8,7 +8,6 @@
 		<class>org.kkdev.cueb.entities.User</class>
 		<class>org.kkdev.cueb.entities.Role</class>
 		<class>org.kkdev.cueb.entities.Session</class>
-		<exclude-unlisted-classes>true</exclude-unlisted-classes>
 		<properties>
 		 	<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
       		<property name="javax.persistence.jdbc.url"    value="jdbc:mysql://localhost:3306/achadm" />

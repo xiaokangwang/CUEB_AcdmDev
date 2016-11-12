@@ -14,7 +14,7 @@ import javax.persistence.*;
 public class Log implements Serializable {
 
     private Long id;
-	private Integer time; 
+	private Long time; 
 	private String Action; 
 	private Integer LogLevel; 
 	private String Detail;
@@ -40,12 +40,12 @@ public class Log implements Serializable {
 		this.id = id;
 	}
 
-	public Integer getTime() {
+	public Long getTime() {
  		return this.time;
 	}
 
-	public void setTime(Integer time) {
-		this.time = time;
+	public void setTime(long l) {
+		this.time = l;
 	}
 	   
 	public String getAction() {

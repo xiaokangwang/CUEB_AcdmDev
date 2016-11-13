@@ -63,7 +63,7 @@ public class RoleAlterPermission {
 		JsonObjectBuilder jsonObject = Json.createObjectBuilder();
 		JsonArrayBuilder initarr = Json.createArrayBuilder();
 		Set<AccessControl_Permission> ac=ro.getPrivileges();
-		for (Iterator iterator = ac.iterator(); iterator.hasNext();) {
+		for (Iterator<AccessControl_Permission> iterator = ac.iterator(); iterator.hasNext();) {
 			AccessControl_Permission accessControl_Permission = (AccessControl_Permission) iterator.next();
 			initarr.add(accessControl_Permission.getName());
 		}
@@ -72,7 +72,7 @@ public class RoleAlterPermission {
 	}
     private String RoleRevokePremission(Role ro,String Ptm) {
     	Set<AccessControl_Permission> ac=ro.getPrivileges();
-    	for (Iterator iterator = ac.iterator(); iterator.hasNext();) {
+    	for (Iterator<AccessControl_Permission> iterator = ac.iterator(); iterator.hasNext();) {
 			AccessControl_Permission accessControl_Permission = (AccessControl_Permission) iterator.next();
 			if(ro.getName().equals(Ptm)){
 				ac.remove(accessControl_Permission);

@@ -4,6 +4,7 @@ import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.POST;
+import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 
 import org.kkdev.cueb.entities.Session;
@@ -20,6 +21,7 @@ import org.kkdev.cueb.logic.user.UserMgr;
 @Stateless
 @LocalBean
 @RequiredPremission("Admin/UserChRole")
+@Path("/UserChRole")
 public class ChRole {
 
     /**

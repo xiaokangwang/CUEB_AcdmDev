@@ -43,7 +43,7 @@ public class ChToken {
     	if(user==null){
     		return "ERR: Username inv";
     	}
-    	User_Token tk = TokenCreate.GenerateToken(user, "INSECURE_password_plain", "Token");
+    	User_Token tk = TokenCreate.GenerateToken(user, "INSECURE_password_plain", Token);
     	User user2=UserMgr.SetUserToken(user, tk);
     	if(user2!=null){
     		return "OK";

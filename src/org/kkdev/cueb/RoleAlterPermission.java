@@ -74,7 +74,7 @@ public class RoleAlterPermission {
     	Set<AccessControl_Permission> ac=ro.getPrivileges();
     	for (Iterator<AccessControl_Permission> iterator = ac.iterator(); iterator.hasNext();) {
 			AccessControl_Permission accessControl_Permission = (AccessControl_Permission) iterator.next();
-			if(ro.getName().equals(Ptm)){
+			if(accessControl_Permission.getName().equals(Ptm)){
 				ac.remove(accessControl_Permission);
 				break;
 			}

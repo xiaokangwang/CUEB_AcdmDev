@@ -13,6 +13,7 @@ import javax.persistence.*;
 public class User_Token implements Serializable {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id; 
 	private String Type; 
 	private String Script;

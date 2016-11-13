@@ -47,7 +47,7 @@ public class PremissionChecker {
 					}
 					Boolean isSatisf = false;
 					for (AccessControl_Permission accessControl_Permission : premsOwn) {
-						if (accessControl_Permission.getName() == prReq) {
+						if (accessControl_Permission.getName().equals(prReq)) {
 							isSatisf = true;
 						}
 					}

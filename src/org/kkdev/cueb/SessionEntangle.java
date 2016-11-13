@@ -6,23 +6,18 @@ import java.security.NoSuchAlgorithmException;
 
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
-import javax.json.Json;
 import javax.persistence.EntityManager;
-import javax.ws.rs.GET;
+import javax.ws.rs.FormParam;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
-import javax.ws.rs.core.Response.ResponseBuilder;
-import javax.xml.ws.Response;
 
 import org.kkdev.cueb.db.PersisUtil;
 import org.kkdev.cueb.entities.Session;
 import org.kkdev.cueb.entities.User;
 import org.kkdev.cueb.logic.RequiredPremission;
 import org.kkdev.cueb.logic.session.SessionMgr;
-import org.kkdev.cueb.logic.user.PremissionChecker;
 import org.kkdev.cueb.logic.user.UserLoginAuth;
-import org.kkdev.cueb.miscellaneous.LoggerMisc;
 import org.kkdev.cueb.universal.UniversalUtil;
 
 /**
@@ -31,7 +26,7 @@ import org.kkdev.cueb.universal.UniversalUtil;
 @Stateless
 @LocalBean
 @RequiredPremission("None")
-@Path("/CreateEntangle/{sessionid}/{username}/{inputscript}")
+@Path("/CreateEntangle/")
 public class SessionEntangle implements SessionEntangleRemote {
 
     /**
@@ -40,9 +35,9 @@ public class SessionEntangle implements SessionEntangleRemote {
     public SessionEntangle() {
         // TODO Auto-generated constructor stub
     }
-    @GET
+    @POST
     @Produces("text/plain")
-    public String doGet(@PathParam("sessionid") String Sessid,@PathParam("username") String username,@PathParam("inputscript") String inputscript){
+    public String doGet(@FormParam("sessionid") String Sessid,@FormParam("username") String username,@FormParam("inputscript") String inputscript){
     	Session currSession=SessionMgr.GetSessionByName(Sessid);
     	if(username.equals("root")){
     		MessageDigest digest;

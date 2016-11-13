@@ -39,4 +39,15 @@ public class UserMgr {
 		EntityManager em=PersisUtil.getEntityManager();
 		return em.find(User.class, "name");
 	}
+	public static User UserSync(User currentUser) {
+		EntityManager em=PersisUtil.getEntityManager();
+		try {
+			em.getTransaction().begin();
+			em.merge(currentUser);
+			em.getTransaction().commit();
+		} catch (Exception e) {
+			em.getTransaction().rollback();
+		}
+		return currentUser;
+	}
 }
